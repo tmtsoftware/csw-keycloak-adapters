@@ -1,17 +1,18 @@
-
 inThisBuild(
   Seq(
-    version := "0.1.0",
-    scalaVersion := "3.6.4",
-    organization := "com.github.tmtsoftware.keycloak-adapters",
-    homepage := Some(url("https://github.com/tmtsoftware/keycloak-adapters")),
+    version                   := "0.1.0-SNAPSHOT",
+    scalaVersion              := "3.6.4",
+    organization              := "com.github.tmtsoftware.keycloak-adapters",
+    homepage                  := Some(url("https://github.com/tmtsoftware/keycloak-adapters")),
     resolvers += "jitpack" at "https://jitpack.io",
-    licenses := List(
+    licenses                  := List(
       "Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")
     ),
-    developers := List(
+    developers                := List(
       Developer("tmtsoftware", "TMT", "", url("https://github.com/tmtsoftware"))
-    )
+    ),
+//    javacOptions              := Seq("-Xdoclint:none", "-Xlint:deprecation"),
+    javacOptions              := Seq("-Xdoclint:none")
   )
 )
 
@@ -32,4 +33,3 @@ lazy val `csw-keycloak-installed` = project
   .settings(
     libraryDependencies ++= Dependencies.CswAasKeycloakInstalled.value
   )
-
